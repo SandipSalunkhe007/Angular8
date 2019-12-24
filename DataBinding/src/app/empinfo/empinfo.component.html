@@ -1,0 +1,20 @@
+<h1>Employee Info</h1>
+<form>
+<label>Name : </label>
+<input type="text" name="name" id="name" placeholder="Enter name" [(ngModel)]="empModel.name"/><br/><br/>
+<label>Address : </label>
+<input type="text" name="address" id="address" placeholder="Enter address" [(ngModel)]="empModel.address"/><br/><br/>
+<label>Age : </label>
+<input type="text" name="age" id="age" placeholder="Enter age" [(ngModel)]="empModel.age"/><br/><br/>
+<label>Designation : </label>
+<input type="text" name="designation" id="designation" placeholder="Enter designation" [(ngModel)]="empModel.designation"/><br/><br/>
+<label>Salary : </label>
+<input type="text" name="salary" id="salary" placeholder="Enter salary" [(ngModel)]="empModel.salary"/><br/><br/>
+<input type="button" value="Submit"  (click)="welsub()"/>
+<br/><br/>
+<p>Name : {{empModel.name}}</p>
+<p>Address : {{empModel.address}}</p>
+<p>Age : {{empModel.age}}</p>
+<p>Designation : {{empModel.designation}}</p>
+<p>Salary : {{empModel.salary}}</p>
+</form>
