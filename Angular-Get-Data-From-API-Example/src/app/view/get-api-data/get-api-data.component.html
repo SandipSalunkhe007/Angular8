@@ -1,0 +1,28 @@
+<!--<form>
+    <label>ID</label>
+    <input type="text" name="id" id="id" placeholder="ID" [(ngModel)]="stdobj.id"/><br/><br/>
+    <label>Name</label>
+    <input type="text" name="empaddr" id="empaddr" placeholder="Address" [(ngModel)]="stdobj.employee_name"/><br/><br/>
+    <label>Salary</label>
+    <input type="text" name="empslry" id="empslry" placeholder="Salary" [(ngModel)]="stdobj.employee_salary"/><br/><br/>
+    <label>Salary</label>
+    <input type="text" name="empage" id="empage" placeholder="Age" [(ngModel)]="stdobj.employee_age"/><br/><br/>
+    <input type="button" value="Submit" (click)="addservices()" />
+</form> -->
+
+<table style="border:solid 1px #333; text-align: center">
+    <thead>
+    <th>Employee ID</th>
+    <th>Employee Name</th>
+    <th>Salary</th>
+    <th>Age</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let objnames of arrylist" style="border:solid 1px #333">
+            <td >{{objnames.id}}</td>
+            <td>{{objnames.employee_name}}</td>
+            <td>{{objnames.employee_salary}}</td>
+            <td>{{objnames.employee_age}}</td>
+            </tr>
+    </tbody>
+    </table>
