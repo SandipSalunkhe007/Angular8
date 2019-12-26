@@ -1,0 +1,28 @@
+  <form #f = "ngForm">
+    <label>Number :</label>
+    <input type="text" name="number" [(ngModel)] = "selectedData.number">
+    <label>Amount :</label>
+    <input type="text" name="amount" [(ngModel)] = "selectedData.amount">
+    <input type="button" (click)="createOrUpdatePolicy(f)" value="Create or Update Data">
+  </form>
+  <br/><br/>
+  <table border='1' width='50%' style='border-collapse: collapse;'>
+    <tr>
+      <th>ID</th>
+      <th>Policy Number</th>
+      <th>Policy Amount</th>
+      <th>Operations</th>
+
+    </tr>
+
+    <tr *ngFor="let dataobjs of dataobj">
+      <td>{{ dataobjs.id }}</td>
+      <td>{{ dataobjs.number }}</td>
+      <td>{{ dataobjs.amount }}</td>
+      <td>
+        <button type="button" value="Submit" (click)="deletebtn(dataobjs.id)">Delete</button>
+        <button type="button" value="Submit" (click)="updatebtn(dataobjs)">Update</button>
+      </td>
+    </tr>
+  </table>
+  
